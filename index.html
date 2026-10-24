@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#efece2">
+  <meta name="description" content="翻開一冊像素時代的遊戲記憶：經典 RPG 圖鑑，收錄遊戲介紹、原名、主機平台、發售年份與實際遊戲畫面。">
+  <title>遊戲記憶庫｜The Pixel Archive</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#library">跳至遊戲圖鑑</a>
+  <header class="site-header wrap">
+    <a class="brand" href="./" aria-label="遊戲記憶庫，回到首頁">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M12 2h8v8h10v12H20v8h-8v-8H2V10h10z" fill="currentColor"/><path d="M14 12h4v8h-4zM10 16h12v4H10z" fill="#efece2"/></svg>
+      <span>遊戲記憶庫<small>THE PIXEL ARCHIVE</small></span>
+    </a>
+    <nav aria-label="主要導覽"><a class="nav-active" href="#library">收藏圖鑑<span class="nav-dot" aria-hidden="true"></span></a><a href="#about">編輯筆記</a></nav>
+    <span class="issue-label">VOL. 01 <span aria-hidden="true">↗</span></span>
+  </header>
+
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="square-dot" aria-hidden="true"></span> THE PIXEL ARCHIVE / <span id="archive-years">1986—1998</span></p>
+        <h1 id="hero-title">把青春，<br>再玩<span class="ink-accent">一次。</span></h1>
+        <p class="hero-description">有些冒險，關掉電源也不會結束。<br>重返像素與音樂構成的世界，<br class="mobile-break">找回那個捨不得放下手把的自己。</p>
+        <a class="start-button" href="#library"><span class="play-triangle" aria-hidden="true"></span> 翻開遊戲圖鑑 <span class="button-arrow" aria-hidden="true">↗</span></a>
+        <div class="hero-stats" aria-label="收藏概況">
+          <div><span class="stat-number" id="game-total">23</span><span class="stat-label">款經典遊戲</span></div>
+          <div><span class="stat-number" id="platform-total">06</span><span class="stat-label">種主機回憶</span></div>
+          <div><span class="stat-number infinity">∞</span><span class="stat-label">次重新感動</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="精選遊戲畫面">
+        <span class="art-coordinate">MEMORY SLOT_01</span>
+        <div class="art-grid" aria-hidden="true"></div>
+        <span class="art-star" aria-hidden="true">✳</span>
+        <figure class="hero-screen" id="hero-screen" hidden>
+          <div class="screen-topline"><span><i aria-hidden="true"></i> 16-BIT MEMORIES</span><span>● ●</span></div>
+          <button class="hero-image-button" id="hero-open" type="button" aria-label="放大精選遊戲畫面"><img id="hero-image" alt="" width="512" height="448"><span class="hero-image-hint">點擊重溫 <span aria-hidden="true">↗</span></span></button>
+          <figcaption><span id="hero-game-title"></span><span id="hero-game-platform"></span></figcaption>
+        </figure>
+        <figure class="mini-screen" id="mini-screen" hidden>
+          <span class="mini-label">ANOTHER SAVED MEMORY</span>
+          <button id="mini-open" type="button" aria-label="放大另一款經典遊戲畫面"><img id="mini-image" alt="" width="256" height="224"></button>
+          <figcaption id="mini-game-title"></figcaption>
+        </figure>
+        <div class="archive-stamp" aria-hidden="true"><span>永遠的</span><strong>經典</strong><small>KEEP PLAYING</small></div>
+        <p class="art-caption"><span aria-hidden="true">＋</span> PRESS START TO REMEMBER</p>
+      </div>
+    </section>
+
+    <div class="memory-strip" aria-hidden="true"><div class="wrap"><span>一格像素，一段回憶。</span><span class="strip-star">✳</span><span class="strip-english">GOOD GAMES NEVER GET OLD.</span><span class="strip-coda">INSERT MEMORIES <span>↵</span></span></div></div>
+
+    <section class="library wrap" id="library" aria-labelledby="library-title">
+      <div class="section-heading">
+        <div><p class="eyebrow olive">01 / THE COLLECTION</p><h2 id="library-title">下一場冒險，<br class="mobile-break">從這裡開始。</h2></div>
+        <p class="section-description">那些走過的城鎮，並肩作戰的夥伴。<br>熟悉的世界，值得再回去一次。</p>
+      </div>
+      <div class="catalog-controls">
+        <div class="filter-heading"><span class="small-label">SELECT YOUR CONSOLE</span><span class="filter-hint">選一台主機，讀取一段回憶。</span></div>
+        <div id="platform-filters" class="platform-filters" role="group" aria-label="依主機平台篩選"><button class="platform-button is-active" type="button" data-platform="all" aria-pressed="true">全部遊戲 <span>23</span></button></div>
+        <div class="search-sort-row">
+          <div class="search-control"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.6"/></svg><label class="visually-hidden" for="search">搜尋遊戲名稱、原名或關鍵字</label><input id="search" type="search" placeholder="搜尋遊戲名稱、原名或一段回憶…" autocomplete="off" spellcheck="false"><kbd aria-hidden="true">/</kbd></div>
+          <div class="sort-control"><label for="sort">排序</label><select id="sort"><option value="original">依收藏順序</option><option value="year-asc">年份：由早到晚</option><option value="year-desc">年份：由晚到早</option><option value="title">遊戲名稱</option></select><span aria-hidden="true">⌄</span></div>
+        </div>
+      </div>
+      <div class="results-toolbar"><p id="results-count" role="status" aria-live="polite" aria-atomic="true">正在讀取遊戲記憶…</p><span class="small-label">A PERSONAL COLLECTION, A SHARED NOSTALGIA.</span></div>
+      <div class="game-grid" id="game-grid" aria-busy="true"></div>
+      <div class="empty-state" id="empty-state" hidden><span class="empty-symbol" aria-hidden="true">?</span><h3>這段記憶，暫時找不到。</h3><p>試試另一個名稱，或換一台主機看看。</p><button class="text-button" id="reset-filters" type="button">清除搜尋與篩選 <span aria-hidden="true">↗</span></button></div>
+      <div class="load-error" id="load-error" role="alert" hidden><h3>遊戲資料暫時無法讀取。</h3><p>請確認網路連線，再重新載入頁面。</p><button class="text-button" id="retry-load" type="button">重新讀取 <span aria-hidden="true">↗</span></button></div>
+      <noscript><p class="load-error">開啟 JavaScript 後，就能使用搜尋、主機篩選與畫面放大功能。也可以直接查看 <a href="games.json">完整遊戲資料</a>。</p></noscript>
+      <div class="catalog-end" aria-hidden="true"><span></span><span>END OF THIS CHAPTER. NOT THE ADVENTURE.</span><span></span></div>
+    </section>
+
+    <section class="editorial-note" id="about" aria-labelledby="about-title"><div class="wrap note-inner">
+      <div class="note-title"><p class="eyebrow">02 / EDITOR'S NOTE</p><h2 id="about-title">遊戲會破關，<br>回憶不會。</h2><span class="note-spark" aria-hidden="true">✳</span></div>
+      <div class="note-copy"><p class="note-intro">這不是排行榜，而是一份寫給像素時代的情書。</p><p>有些名字，來自當年的攻略本；有些畫面，只要一眼就能想起旋律。把它們放在這裡，是為了讓那些曾經認真投入的冒險，有一個可以隨時回來的地方。</p><div class="editorial-facts"><span class="small-label">關於這份圖鑑</span><p>譯名依原清單保留，原名與平台另列；年份以原版日本發售為主。</p><p>不同地區版本與後續移植可能有不同名稱、年份或平台。個別補充與考證註記，請見各遊戲卡片。</p><p>每款遊戲均附資料及畫面來源。點擊遊戲畫面可放大檢視。</p></div></div>
+    </div></section>
+  </main>
+
+  <footer class="site-footer wrap"><div class="footer-top"><a class="footer-brand" href="#">遊戲記憶庫<span>THE PIXEL ARCHIVE</span></a><a class="back-top" href="#">回到頂端 <span aria-hidden="true">↑</span></a></div><div class="footer-bottom"><p>遊戲名稱、角色及畫面著作權屬各權利人。本站僅供評論、介紹與資料參考，不提供 ROM 或遊戲下載。</p><span>MADE FOR THE MEMORIES. <span class="footer-dot" aria-hidden="true">●</span></span></div></footer>
+
+  <dialog id="lightbox" class="lightbox" aria-labelledby="lightbox-title" aria-describedby="lightbox-description"><div class="lightbox-content"><div class="lightbox-top"><span class="small-label" id="lightbox-counter">SCREENSHOT</span><button class="lightbox-close" id="lightbox-close" type="button" aria-label="關閉遊戲畫面"><span aria-hidden="true">×</span></button></div><div class="lightbox-stage"><button class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button" aria-label="上一款遊戲畫面">←</button><figure><img id="lightbox-image" alt="" width="768" height="672"><p id="lightbox-image-error" hidden>這張畫面目前無法載入，請使用下方的畫面來源連結。</p></figure><button class="lightbox-nav lightbox-next" id="lightbox-next" type="button" aria-label="下一款遊戲畫面">→</button></div><div class="lightbox-bottom"><div><h2 id="lightbox-title"></h2><p id="lightbox-description"></p></div><a id="lightbox-source" target="_blank" rel="noopener noreferrer">畫面來源 <span aria-hidden="true">↗</span></a></div><p class="lightbox-help">使用 ← → 切換畫面 · Esc 關閉</p></div></dialog>
+</body>
+</html>
